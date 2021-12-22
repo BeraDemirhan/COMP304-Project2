@@ -13,6 +13,7 @@
   original by Yingwu Zhu
   updated by Muhammed Nufail Farooqi
   *****************************************************************************/
+// Functions are explained in README file.
 
 static int __cars[4] = {0, 0, 0, 0};
 pthread_mutex_t inter[4], N, E, S, W, off, synch;
@@ -526,19 +527,4 @@ int main(int argc, char *argv[])
   return 0;
 }
 
-/*
- random
- 0.4
- --------------
- North - fork()
- South
- West
- East
- --------------
- Shared MEM ++
- --------------
- 1 arba geçiş - 1sn
- p = 0.4 t=1 W 
 
- ./test 0.4 -s 200
-*/
