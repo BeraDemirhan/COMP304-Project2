@@ -5,6 +5,8 @@ officer.log is empty as p=0.4 is high for the officer to play with his/her phone
 To see officer.log working, try a lower p value such as p = 0.1
 
 ## Implementation
+All cars are implemented as threads and the intersection is the resource.
+
 There are 6 mutex locks, 4 for directions (to control the flow of the traffic) mutex off is used for when officer plays with cellphone and sync for syncronization for the flow (used to avoid deadlock when no cars arrive and police playing with the phone. The deadlock is caused by both cars and police takes N S E W mutexes.)
 
 The variable stackarr creates 4 queues using their given priority N > E > S > W all of which are individual LinkedLists. (for example stackarr[3] = West Linked List) 
